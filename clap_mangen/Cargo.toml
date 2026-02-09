@@ -34,11 +34,11 @@ bench = false
 
 [dependencies]
 roff = "0.2.1"
-clap = { path = "../", version = "4.0.0", default-features = false, features = ["std", "env"] }
+clap = { package = "fast_clap", path = "../", version = "4.0.0", default-features = false, features = ["std", "env"] }
 
 [dev-dependencies]
 snapbox = { version = "0.6.0", features = ["diff"] }
-clap = { path = "../", version = "4.0.0", default-features = false, features = ["std", "help"] }
+clap = { package = "fast_clap", path = "../", version = "4.0.0", default-features = false, features = ["std", "help"] }
 automod = "1.0.14"
 
 [features]

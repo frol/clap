@@ -36,7 +36,7 @@ fn explicit_name_no_rename() {
 
     let help = utils::get_long_help::<Opt>();
     assert_data_eq!(help, str![[r#"
-Usage: clap <.options>
+Usage: fast_clap <.options>
 
 Arguments:
   <.options>

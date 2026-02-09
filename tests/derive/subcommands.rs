@@ -163,7 +163,7 @@ fn test_tuple_commands() {
     let output = utils::get_long_help::<Opt4>();
 
     assert_data_eq!(output, str![[r#"
-Usage: clap <COMMAND>
+Usage: fast_clap <COMMAND>
 
 Commands:
   add    Add a file

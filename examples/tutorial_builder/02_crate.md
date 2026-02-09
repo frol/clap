@@ -11,6 +11,6 @@ Options:
   -V, --version      Print version
 
 $ 02_crate --version
-clap [..]
+fast_clap [..]
 
 ```

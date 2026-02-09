@@ -58,7 +58,7 @@ fn auto_value_name() {
     let help = get_help::<Opt>();
 
     assert_data_eq!(help, str![[r#"
-Usage: clap <MY_SPECIAL_ARG>
+Usage: fast_clap <MY_SPECIAL_ARG>
 
 Arguments:
   <MY_SPECIAL_ARG>  
@@ -86,7 +86,7 @@ fn explicit_value_name() {
     let help = get_help::<Opt>();
 
     assert_data_eq!(help, str![[r#"
-Usage: clap <BROWNIE_POINTS>
+Usage: fast_clap <BROWNIE_POINTS>
 
 Arguments:
   <BROWNIE_POINTS>  

@@ -231,8 +231,8 @@ fn derive_generated_error_has_full_context() {
     let expected = str![[r#"
 error: the following required argument was not provided: req_str
 
-Usage: clap --req-str <REQ_STR>
-       clap <COMMAND>
+Usage: fast_clap --req-str <REQ_STR>
+       fast_clap <COMMAND>
 
 For more information, try '--help'.
 
@@ -425,7 +425,7 @@ fn derive_possible_value_help() {
         str![[r#"
 Application help
 
-Usage: clap <ARG>
+Usage: fast_clap <ARG>
 
 Arguments:
   <ARG>

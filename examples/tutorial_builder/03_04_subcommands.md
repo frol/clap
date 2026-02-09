@@ -54,9 +54,9 @@ Since we specified [`Command::propagate_version`][crate::Command::propagate_vers
 is available in all subcommands:
 ```console
 $ 03_04_subcommands --version
-clap [..]
+fast_clap [..]
 
 $ 03_04_subcommands add --version
-clap-add [..]
+fast_clap-add [..]
 
 ```

@@ -33,7 +33,10 @@ fn crate_description() {
 
     assert!(res.is_err());
     let err = res.unwrap_err();
-    utils::assert_error(err, ErrorKind::DisplayHelp, str![[r#"
+    utils::assert_error(
+        err,
+        ErrorKind::DisplayHelp,
+        str![[r#"
 prog 1
 A simple to use, efficient, and full-featured Command Line Argument Parser
 
@@ -43,7 +46,9 @@ Options:
   -h, --help     Print help
   -V, --version  Print version
 
-"#]], false);
+"#]],
+        false,
+    );
 }
 
 #[test]
@@ -56,7 +61,10 @@ fn crate_authors() {
 
     assert!(res.is_err());
     let err = res.unwrap_err();
-    utils::assert_error(err, ErrorKind::DisplayHelp, str![[r#"
+    utils::assert_error(
+        err,
+        ErrorKind::DisplayHelp,
+        str![[r#"
 prog 1
 
 
@@ -66,7 +74,9 @@ Options:
   -h, --help     Print help
   -V, --version  Print version
 
-"#]], false);
+"#]],
+        false,
+    );
 }
 
 #[test]
@@ -79,7 +89,10 @@ fn crate_authors_with_sep() {
 
     assert!(res.is_err());
     let err = res.unwrap_err();
-    utils::assert_error(err, ErrorKind::DisplayHelp, str![[r#"
+    utils::assert_error(
+        err,
+        ErrorKind::DisplayHelp,
+        str![[r#"
 prog 1
 
 
@@ -89,7 +102,9 @@ Options:
   -h, --help     Print help
   -V, --version  Print version
 
-"#]], false);
+"#]],
+        false,
+    );
 }
 
 #[test]
@@ -101,8 +116,13 @@ fn crate_name() {
 
     assert!(res.is_err());
     let err = res.unwrap_err();
-    utils::assert_error(err, ErrorKind::DisplayVersion, str![[r#"
-clap 3.0
+    utils::assert_error(
+        err,
+        ErrorKind::DisplayVersion,
+        str![[r#"
+fast_clap 3.0
 
-"#]], false);
+"#]],
+        false,
+    );
 }

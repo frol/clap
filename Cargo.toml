@@ -11,7 +11,7 @@ members = [
 ]
 
 [workspace.package]
-repository = "https://github.com/clap-rs/clap"
+repository = "https://github.com/frol/clap"
 license = "MIT OR Apache-2.0"
 edition = "2021"
 rust-version = "1.74"  # MSRV
@@ -107,7 +107,7 @@ lto = true
 # debug = "line-tables-only"  # requires Cargo 1.71
 
 [package]
-name = "clap"
+name = "fast_clap"
 version = "4.5.57"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 categories = ["command-line-interface"]
@@ -182,11 +182,14 @@ unstable-derive-ui-tests = []
 unstable-markdown = ["clap_derive/unstable-markdown"]
 
 [lib]
+name = "clap"
+path = "src/lib.rs"
+doctest = true
 bench = false
 
 [dependencies]
 clap_builder = { path = "./clap_builder", version = "=4.5.57", default-features = false }
-clap_derive = { path = "./clap_derive", version = "=4.5.55", optional = true }
+clap_derive = { package = "fast_clap_derive", path = "./clap_derive", version = "=4.5.55", optional = true }
 
 [dev-dependencies]
 trybuild = "1.0.91"

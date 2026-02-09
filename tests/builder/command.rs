@@ -4,7 +4,7 @@ use clap::{command, error::ErrorKind};
 
 use crate::utils;
 
-static EVERYTHING: &str = "clap {{version}}
+static EVERYTHING: &str = "fast_clap {{version}}
 A simple to use, efficient, and full-featured Command Line Argument Parser
 
 Usage: clap

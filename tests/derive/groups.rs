@@ -136,7 +136,7 @@ fn optional_flatten() {
 
 #[test]
 #[should_panic = "\
-Command clap: Argument group name must be unique
+Command fast_clap: Argument group name must be unique
 
 \t'Compose' is already in use"]
 fn helpful_panic_on_duplicate_groups() {

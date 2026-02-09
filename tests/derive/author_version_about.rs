@@ -41,10 +41,10 @@ fn use_env() {
     assert_data_eq!(
         output,
         str![[r#"
-clap [..]
+fast_clap [..]
 A simple to use, efficient, and full-featured Command Line Argument Parser
 
-Usage: clap
+Usage: fast_clap
 
 Options:
   -h, --help
@@ -70,9 +70,9 @@ fn explicit_version_not_str_lit() {
     assert_data_eq!(
         output,
         str![[r#"
-clap custom version
+fast_clap custom version
 
-Usage: clap
+Usage: fast_clap
 
 Options:
   -h, --help

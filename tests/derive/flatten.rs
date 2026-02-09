@@ -215,7 +215,7 @@ fn flatten_with_doc_comment() {
 
     let help = utils::get_help::<Opt>();
     assert_data_eq!(help, str![[r#"
-Usage: clap <ARG>
+Usage: fast_clap <ARG>
 
 Arguments:
   <ARG>  This is an arg. Arg means "argument". Command line argument
@@ -247,7 +247,7 @@ fn docstrings_ordering_with_multiple_command() {
     assert_data_eq!(short_help, str![[r#"
 This is the docstring for Command
 
-Usage: clap [OPTIONS]
+Usage: fast_clap [OPTIONS]
 
 Options:
       --foo   
@@ -276,7 +276,7 @@ fn docstrings_ordering_with_multiple_clap_partial() {
     assert_data_eq!(short_help, str![[r#"
 This is the docstring for Flattened
 
-Usage: clap [OPTIONS]
+Usage: fast_clap [OPTIONS]
 
 Options:
       --foo   

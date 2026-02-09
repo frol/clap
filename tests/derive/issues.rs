@@ -76,9 +76,9 @@ fn issue_324() {
 
     let help = utils::get_long_help::<Opt>();
     assert_data_eq!(help, str![[r#"
-clap MY_VERSION
+fast_clap MY_VERSION
 
-Usage: clap <COMMAND>
+Usage: fast_clap <COMMAND>
 
 Commands:
   start  
@@ -118,7 +118,7 @@ fn issue_418() {
 
     let help = utils::get_long_help::<Opts>();
     assert_data_eq!(help, str![[r#"
-Usage: clap <COMMAND>
+Usage: fast_clap <COMMAND>
 
 Commands:
   reticulate  Reticulate the splines [aliases: ret]

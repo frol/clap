@@ -34,7 +34,7 @@ fn doc_comments() {
     assert_data_eq!(help, str![[r#"
 Lorem ipsum
 
-Usage: clap [OPTIONS]
+Usage: fast_clap [OPTIONS]
 
 Options:
   -f, --foo
@@ -245,7 +245,7 @@ DANCE!
      ( ()    ||
       (      () ) )
 
-Usage: clap [OPTIONS]
+Usage: fast_clap [OPTIONS]
 
 Options:
       --foo
@@ -272,7 +272,7 @@ fn verbatim_doc_comment_field() {
     let help = utils::get_long_help::<Command>();
 
     assert_data_eq!(help, str![[r#"
-Usage: clap [OPTIONS]
+Usage: fast_clap [OPTIONS]
 
 Options:
       --foo
@@ -300,7 +300,7 @@ fn multiline_separates_default() {
 
     let help = utils::get_long_help::<Command>();
     assert_data_eq!(help, str![[r#"
-Usage: clap [OPTIONS]
+Usage: fast_clap [OPTIONS]
 
 Options:
       --x <X>
@@ -318,7 +318,7 @@ Options:
     // The short help should still have the default on the same line
     let help = utils::get_help::<Command>();
     assert_data_eq!(help, str![[r#"
-Usage: clap [OPTIONS]
+Usage: fast_clap [OPTIONS]
 
 Options:
       --x <X>  Multiline [default: x]
@@ -346,7 +346,7 @@ fn value_enum_multiline_doc_comment() {
     let help = utils::get_long_help::<Command>();
 
     assert_data_eq!(help, str![[r#"
-Usage: clap <X>
+Usage: fast_clap <X>
 
 Arguments:
   <X>
@@ -382,7 +382,7 @@ fn value_enum_multiline_doc_comment() {
 
     // There is no long help text for possible values. The long help only contains the summary.
     assert_data_eq!(help, str![[r#"
-Usage: clap <X>
+Usage: fast_clap <X>
 
 Arguments:
   <X>
@@ -467,7 +467,7 @@ fn force_long_help() {
     assert_data_eq!(help, str![[r#"
 Lorem ipsum
 
-Usage: clap [OPTIONS]
+Usage: fast_clap [OPTIONS]
 
 Options:
   -f, --foo

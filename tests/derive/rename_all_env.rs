@@ -18,7 +18,7 @@ fn it_works() {
 
     let help = utils::get_help::<BehaviorModel>();
     assert_data_eq!(help, str![[r#"
-Usage: clap <BE_NICE>
+Usage: fast_clap <BE_NICE>
 
 Arguments:
   <BE_NICE>  [env: be-nice=]
@@ -39,7 +39,7 @@ fn default_is_screaming() {
 
     let help = utils::get_help::<BehaviorModel>();
     assert_data_eq!(help, str![[r#"
-Usage: clap <BE_NICE>
+Usage: fast_clap <BE_NICE>
 
 Arguments:
   <BE_NICE>  [env: BE_NICE=]
@@ -64,7 +64,7 @@ fn overridable() {
 
     let help = utils::get_help::<BehaviorModel>();
     assert_data_eq!(help, str![[r#"
-Usage: clap <BE_NICE> <BE_AGGRESSIVE>
+Usage: fast_clap <BE_NICE> <BE_AGGRESSIVE>
 
 Arguments:
   <BE_NICE>        [env: be-nice=]

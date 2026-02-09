@@ -53,9 +53,9 @@ Since we specified [`#[command(propagate_version = true)]`][crate::Command::prop
 the `--version` flag is available in all subcommands:
 ```console
 $ 03_04_subcommands_derive --version
-clap [..]
+fast_clap [..]
 
 $ 03_04_subcommands_derive add --version
-clap-add [..]
+fast_clap-add [..]
 
 ```

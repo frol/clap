@@ -431,23 +431,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "clap"
-version = "4.5.57"
-dependencies = [
- "automod",
- "clap-cargo",
- "clap_builder 4.5.57",
- "clap_derive",
- "jiff",
- "rustversion",
- "semver",
- "shlex",
- "snapbox",
- "trybuild",
- "trycmd",
-]
-
-[[package]]
 name = "clap-cargo"
 version = "0.15.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -460,8 +443,8 @@ dependencies = [
 name = "clap_bench"
 version = "0.0.0"
 dependencies = [
- "clap 4.5.57",
  "divan",
+ "fast_clap",
  "lazy_static",
 ]
 
@@ -501,10 +484,10 @@ name = "clap_complete"
 version = "4.5.65"
 dependencies = [
  "automod",
- "clap 4.5.57",
  "clap_lex 0.7.7",
  "completest",
  "completest-pty",
+ "fast_clap",
  "is_executable",
  "shlex",
  "snapbox",
@@ -515,23 +498,11 @@ dependencies = [
 name = "clap_complete_nushell"
 version = "4.5.10"
 dependencies = [
- "clap 4.5.57",
  "clap_complete",
  "completest",
  "completest-nu",
+ "fast_clap",
  "snapbox",
-]
-
-[[package]]
-name = "clap_derive"
-version = "4.5.55"
-dependencies = [
- "anstyle",
- "heck 0.5.0",
- "proc-macro2",
- "pulldown-cmark",
- "quote",
- "syn",
 ]
 
 [[package]]
@@ -552,7 +523,7 @@ name = "clap_mangen"
 version = "0.2.31"
 dependencies = [
  "automod",
- "clap 4.5.57",
+ "fast_clap",
  "roff",
  "snapbox",
 ]
@@ -859,7 +830,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6e05d17bd4ff1c1e7998ed4623d2efd91f72f1e24141ac33aac9377974270e1f"
 dependencies = [
  "cfg-if",
- "clap 4.5.39",
+ "clap",
  "condtype",
  "divan-macros",
  "libc",
@@ -974,6 +945,35 @@ checksum = "b95f7c0680e4142284cf8b22c14a476e87d61b004a3a0861872b32ef7ead40a2"
 dependencies = [
  "bit-set",
  "regex",
+]
+
+[[package]]
+name = "fast_clap"
+version = "4.5.57"
+dependencies = [
+ "automod",
+ "clap-cargo",
+ "clap_builder 4.5.57",
+ "fast_clap_derive",
+ "jiff",
+ "rustversion",
+ "semver",
+ "shlex",
+ "snapbox",
+ "trybuild",
+ "trycmd",
+]
+
+[[package]]
+name = "fast_clap_derive"
+version = "4.5.55"
+dependencies = [
+ "anstyle",
+ "heck 0.5.0",
+ "proc-macro2",
+ "pulldown-cmark",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -3695,7 +3695,7 @@ version = "0.0.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4c8e090cfcfa51cb224d247e05938d25718a7203c6f8c0f0de7b3b031d99dcea"
 dependencies = [
- "clap 4.5.39",
+ "clap",
  "filetime",
  "indicatif",
  "libc",
@@ -3711,7 +3711,7 @@ version = "0.0.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dcbf657c9e738d16ebc5c161a611ff25327c1fb599645afb2831062efb23c851"
 dependencies = [
- "clap 4.5.39",
+ "clap",
  "uucore",
 ]
 
@@ -3721,7 +3721,7 @@ version = "0.0.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "154531208d9ec160629bf9545a56ad9df38e964e547e0a17ee9d75aeec9831cb"
 dependencies = [
- "clap 4.5.39",
+ "clap",
  "rand",
  "tempfile",
  "uucore",
@@ -3733,7 +3733,7 @@ version = "0.0.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "70589dc3b41f34cbfe1fb22b8f20fcac233fa4565409905f12dd06780b18374d"
 dependencies = [
- "clap 4.5.39",
+ "clap",
  "libc",
  "uucore",
  "windows-sys 0.48.0",
@@ -3745,7 +3745,7 @@ version = "0.0.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7b54aad02cf7e96f5fafabb6b836efa73eef934783b17530095a29ffd4fdc154"
 dependencies = [
- "clap 4.5.39",
+ "clap",
  "dunce",
  "glob",
  "libc",

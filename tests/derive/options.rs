@@ -286,7 +286,7 @@ fn option_option_type_help() {
     }
     let help = utils::get_help::<Opt>();
     assert_data_eq!(help, str![[r#"
-Usage: clap [OPTIONS]
+Usage: fast_clap [OPTIONS]
 
 Options:
       --arg [<val>]  

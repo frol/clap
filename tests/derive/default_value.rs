@@ -19,7 +19,7 @@ fn default_value() {
 
     let help = utils::get_long_help::<Opt>();
     assert_data_eq!(help, str![[r#"
-Usage: clap [ARG]
+Usage: fast_clap [ARG]
 
 Arguments:
   [ARG]
@@ -44,7 +44,7 @@ fn default_value_t() {
 
     let help = utils::get_long_help::<Opt>();
     assert_data_eq!(help, str![[r#"
-Usage: clap [ARG]
+Usage: fast_clap [ARG]
 
 Arguments:
   [ARG]
@@ -69,7 +69,7 @@ fn auto_default_value_t() {
 
     let help = utils::get_long_help::<Opt>();
     assert_data_eq!(help, str![[r#"
-Usage: clap [ARG]
+Usage: fast_clap [ARG]
 
 Arguments:
   [ARG]
@@ -140,7 +140,7 @@ fn default_values_t() {
 
     let help = utils::get_long_help::<Opt>();
     assert_data_eq!(help, str![[r#"
-Usage: clap [OPTIONS] [ARG1]...
+Usage: fast_clap [OPTIONS] [ARG1]...
 
 Arguments:
   [ARG1]...
@@ -190,7 +190,7 @@ fn default_value_os_t() {
 
     let help = utils::get_long_help::<Opt>();
     assert_data_eq!(help, str![[r#"
-Usage: clap [ARG]
+Usage: fast_clap [ARG]
 
 Arguments:
   [ARG]
@@ -235,7 +235,7 @@ fn default_values_os_t() {
 
     let help = utils::get_long_help::<Opt>();
     assert_data_eq!(help, str![[r#"
-Usage: clap [OPTIONS] [ARG1]...
+Usage: fast_clap [OPTIONS] [ARG1]...
 
 Arguments:
   [ARG1]...
